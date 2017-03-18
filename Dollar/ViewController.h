@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)getCourse:(id)sender;
 
 @end
 

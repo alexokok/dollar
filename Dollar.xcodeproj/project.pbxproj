@@ -14,6 +14,8 @@
 		CE83326C1E7CF1FF007D9C95 /* Dollar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE83326A1E7CF1FF007D9C95 /* Dollar.xcdatamodeld */; };
 		CE83326E1E7CF1FF007D9C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE83326D1E7CF1FF007D9C95 /* Assets.xcassets */; };
 		CE8332711E7CF1FF007D9C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE83326F1E7CF1FF007D9C95 /* LaunchScreen.storyboard */; };
+		CE8332791E7CFAA1007D9C95 /* currency_dollarblue_9627.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8332781E7CFAA1007D9C95 /* currency_dollarblue_9627.png */; };
+		CE83327B1E7CFAB2007D9C95 /* currency_euroblue_7162.png in Resources */ = {isa = PBXBuildFile; fileRef = CE83327A1E7CFAB2007D9C95 /* currency_euroblue_7162.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CE83326D1E7CF1FF007D9C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8332701E7CF1FF007D9C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8332721E7CF1FF007D9C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8332781E7CFAA1007D9C95 /* currency_dollarblue_9627.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = currency_dollarblue_9627.png; path = ../../Downloads/currency_dollarblue_9627.png; sourceTree = "<group>"; };
+		CE83327A1E7CFAB2007D9C95 /* currency_euroblue_7162.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = currency_euroblue_7162.png; path = ../../Downloads/currency_euroblue_7162.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 		CE8332521E7CF1FE007D9C95 = {
 			isa = PBXGroup;
 			children = (
+				CE83327A1E7CFAB2007D9C95 /* currency_euroblue_7162.png */,
+				CE8332781E7CFAA1007D9C95 /* currency_dollarblue_9627.png */,
 				CE83325D1E7CF1FF007D9C95 /* Dollar */,
 				CE83325C1E7CF1FF007D9C95 /* Products */,
 			);
@@ -142,6 +148,8 @@
 			files = (
 				CE8332711E7CF1FF007D9C95 /* LaunchScreen.storyboard in Resources */,
 				CE83326E1E7CF1FF007D9C95 /* Assets.xcassets in Resources */,
+				CE8332791E7CFAA1007D9C95 /* currency_dollarblue_9627.png in Resources */,
+				CE83327B1E7CFAB2007D9C95 /* currency_euroblue_7162.png in Resources */,
 				CE8332691E7CF1FF007D9C95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
