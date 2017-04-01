@@ -52,7 +52,8 @@
                      
                      for(int i = 0; i < [rate count]; i++)
                      {
-                         
+                        NSString *a  = [[rate objectAtIndex:i] objectForKey:@"Name"];
+                        NSLog(@" %@", a);
                      }
                      
                      
