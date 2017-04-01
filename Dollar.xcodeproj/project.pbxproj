@@ -319,6 +319,7 @@
 				CE8332771E7CF1FF007D9C95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
