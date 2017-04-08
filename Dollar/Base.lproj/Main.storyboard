@@ -65,6 +65,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dollarLabel" destination="D2i-SQ-1T4" id="onY-OM-dlm"/>
+                        <outlet property="euroLabel" destination="LOU-Wg-lvH" id="efj-ft-Lau"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

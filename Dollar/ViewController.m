@@ -12,6 +12,10 @@
 
 @end
 
+/** индикатор при загрузке данных */
+UIActivityIndicatorView *indicator;
+
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -26,46 +30,61 @@
     
 }
 
+
 /* получаем курс валют */
-- (IBAction)getCourse:(id)sender {
+-(void)loadCourses{
     
+    //spinner для окошка ожидания
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]
+                                        initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    spinner.center = CGPointMake(160, 240);
+    spinner.hidesWhenStopped = YES;
+        
+    [self.view addSubview:spinner];
+    [spinner startAnimating];
+
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
-    
     
     NSURL * url = [NSURL URLWithString:@"https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDRUB,EURRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback="];
     
     NSURLSessionDataTask * dataTask = [defaultSession dataTaskWithURL:url
         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                 if(error == nil)
-                 {
-                     NSString * text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-                     
-                     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options: 0 error:&error];
-                     
-                     NSDictionary *results = [json objectForKey:@"query"];
-                     
-                     NSDictionary *rates = [results objectForKey:@"results"];
-                     
-                     NSArray *rate = [rates objectForKey: @"rate"];
-                     
-                     for(int i = 0; i < [rate count]; i++)
-                     {
-                        NSString *a  = [[rate objectAtIndex:i] objectForKey:@"Name"];
-                        NSLog(@" %@", a);
-                     }
-                     
-                     
-                     //NSDictionary *rate = [NSJSONSerialization JSONObjectWithData:results options: 0 error:&error];
-                     //NSString *rates = [rate objectForKey:@"resutls"];
-                     
-                     NSLog(@"Data = %@", rate);
-                 }
-    }];
+              if(error == nil)
+              {
+                  NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options: 0 error:&error];
+                  NSDictionary *results = [json objectForKey:@"query"];
+                  NSDictionary *rates = [results objectForKey:@"results"];
+                  NSArray *rate = [rates objectForKey: @"rate"];
+                                                            
+                  for(int i = 0; i < [rate count]; i++)
+                  {
+                    NSString *a  = [[rate objectAtIndex:i] objectForKey:@"Rate"];
+                      switch (i) {
+                          case 0:
+                              self.dollarLabel.text = a ;
+                              break;
+                          case 1:
+                              self.euroLabel.text = a;
+                              break;
+                          default:
+                              break;
+                      }
+                  }
+               }
+            
+               dispatch_async(dispatch_get_main_queue(), ^{
+                 [spinner stopAnimating];
+               });
+        }];
     
     [dataTask resume];
 }
 
+  
+- (IBAction)getCourse:(id)sender {
+    [self loadCourses];
+}
 
 @end

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>refresh</key>
+	<string>Обновить</string>
+	<key>dollar</key>
+	<string>курс доллара</string>
+	<key>euro</key>
+	<string>курс евро</string>
+	<key>refresh_date</key>
+	<string>дата последнего обновления</string>
+	<key>connectoion_error</key>
+	<string>ошибка соединения</string>
+</dict>
+</plist>

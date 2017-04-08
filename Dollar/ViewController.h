@@ -10,7 +10,10 @@
 
 @interface ViewController : UIViewController
 
-- (IBAction)getCourse:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *euroLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dollarLabel;
 
+- (IBAction)getCourse:(id)sender;
+- (void) loadCourses;
 @end
 
