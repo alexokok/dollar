@@ -1,0 +1,12 @@
+/* 
+  RuStrings.strings
+  Dollar
+
+  Created by user on 15.04.17.
+  Copyright © 2017 HelloWorld. All rights reserved.
+*/
+"refresh" = "Обновить";
+"error" = "Отсутсвует подключение к сети";
+"dollar" = "курс доллара";
+"euro" = "курс евро";
+"lastrefresh" = "последнее обновление проводилось";

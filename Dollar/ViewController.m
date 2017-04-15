@@ -20,7 +20,16 @@ UIActivityIndicatorView *indicator;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.RefreshButton setTitle:NSLocalizedString(@"refresh", @"to refresh") forState:UIControlStateNormal];
+    
+    self.dateTitle.text = NSLocalizedString(@"lastrefresh", @"to refresh");
+    
+    self.dollarLabel.text = NSLocalizedString(@"dollar", @"to dollar");
+    
+    self.euroLabel.text = NSLocalizedString(@"euro", @"to euro");
+    
+    [self loadCourses];
 }
 
 
@@ -33,7 +42,6 @@ UIActivityIndicatorView *indicator;
 
 /* получаем курс валют */
 -(void)loadCourses{
-    
     //spinner для окошка ожидания
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]
                                         initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -63,15 +71,24 @@ UIActivityIndicatorView *indicator;
                     NSString *a  = [[rate objectAtIndex:i] objectForKey:@"Rate"];
                       switch (i) {
                           case 0:
-                              self.dollarLabel.text = a ;
+                              self.dollarValue.text = a ;
                               break;
                           case 1:
-                              self.euroLabel.text = a;
+                              self.euroValueLabel.text = a;
                               break;
                           default:
                               break;
                       }
                   }
+                  
+                 
+                  NSDate *date = [NSDate date];
+                  
+                  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                  [formatter setDateFormat:@"dd.mm.yyyy hh:mm:ss"];
+                  [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+                  
+                  self.dateValue.text = [formatter stringFromDate:date];
                }
             
                dispatch_async(dispatch_get_main_queue(), ^{
