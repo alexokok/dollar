@@ -14,9 +14,12 @@
 		CE83326C1E7CF1FF007D9C95 /* Dollar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE83326A1E7CF1FF007D9C95 /* Dollar.xcdatamodeld */; };
 		CE83326E1E7CF1FF007D9C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE83326D1E7CF1FF007D9C95 /* Assets.xcassets */; };
 		CE8332711E7CF1FF007D9C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE83326F1E7CF1FF007D9C95 /* LaunchScreen.storyboard */; };
-		CE8332791E7CFAA1007D9C95 /* currency_dollarblue_9627.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8332781E7CFAA1007D9C95 /* currency_dollarblue_9627.png */; };
 		CE83327B1E7CFAB2007D9C95 /* currency_euroblue_7162.png in Resources */ = {isa = PBXBuildFile; fileRef = CE83327A1E7CFAB2007D9C95 /* currency_euroblue_7162.png */; };
 		CEF4FC871EA1F07E00CB36B4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF4FC861EA1F07E00CB36B4 /* Localizable.strings */; };
+		CEF4FC891EA2013500CB36B4 /* currency_dollarblue_3817.ico in Resources */ = {isa = PBXBuildFile; fileRef = CEF4FC881EA2013500CB36B4 /* currency_dollarblue_3817.ico */; };
+		CEF4FC8B1EA2030E00CB36B4 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF4FC8A1EA2030E00CB36B4 /* splash.png */; };
+		CEF4FC8F1EAB291100CB36B4 /* splashBigNew-2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF4FC8E1EAB291100CB36B4 /* splashBigNew-2.png */; };
+		CEF4FC911EAB2CC400CB36B4 /* splashes in Resources */ = {isa = PBXBuildFile; fileRef = CEF4FC901EAB2CC400CB36B4 /* splashes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +34,12 @@
 		CE83326D1E7CF1FF007D9C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8332701E7CF1FF007D9C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8332721E7CF1FF007D9C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE8332781E7CFAA1007D9C95 /* currency_dollarblue_9627.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = currency_dollarblue_9627.png; path = ../../Downloads/currency_dollarblue_9627.png; sourceTree = "<group>"; };
 		CE83327A1E7CFAB2007D9C95 /* currency_euroblue_7162.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = currency_euroblue_7162.png; path = ../../Downloads/currency_euroblue_7162.png; sourceTree = "<group>"; };
 		CEF4FC861EA1F07E00CB36B4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CEF4FC881EA2013500CB36B4 /* currency_dollarblue_3817.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = currency_dollarblue_3817.ico; path = ../../Downloads/currency_dollarblue_3817.ico; sourceTree = "<group>"; };
+		CEF4FC8A1EA2030E00CB36B4 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../../Downloads/splash.png; sourceTree = "<group>"; };
+		CEF4FC8E1EAB291100CB36B4 /* splashBigNew-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splashBigNew-2.png"; path = "../../Downloads/splashBigNew-2.png"; sourceTree = "<group>"; };
+		CEF4FC901EAB2CC400CB36B4 /* splashes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = splashes; path = ../../Downloads/splashes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +56,11 @@
 		CE8332521E7CF1FE007D9C95 = {
 			isa = PBXGroup;
 			children = (
+				CEF4FC901EAB2CC400CB36B4 /* splashes */,
+				CEF4FC8E1EAB291100CB36B4 /* splashBigNew-2.png */,
+				CEF4FC8A1EA2030E00CB36B4 /* splash.png */,
+				CEF4FC881EA2013500CB36B4 /* currency_dollarblue_3817.ico */,
 				CE83327A1E7CFAB2007D9C95 /* currency_euroblue_7162.png */,
-				CE8332781E7CFAA1007D9C95 /* currency_dollarblue_9627.png */,
 				CE83325D1E7CF1FF007D9C95 /* Dollar */,
 				CE83325C1E7CF1FF007D9C95 /* Products */,
 			);
@@ -150,10 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF4FC871EA1F07E00CB36B4 /* Localizable.strings in Resources */,
+				CEF4FC8B1EA2030E00CB36B4 /* splash.png in Resources */,
 				CE8332711E7CF1FF007D9C95 /* LaunchScreen.storyboard in Resources */,
+				CEF4FC8F1EAB291100CB36B4 /* splashBigNew-2.png in Resources */,
+				CEF4FC911EAB2CC400CB36B4 /* splashes in Resources */,
 				CE83326E1E7CF1FF007D9C95 /* Assets.xcassets in Resources */,
-				CE8332791E7CFAA1007D9C95 /* currency_dollarblue_9627.png in Resources */,
 				CE83327B1E7CFAB2007D9C95 /* currency_euroblue_7162.png in Resources */,
+				CEF4FC891EA2013500CB36B4 /* currency_dollarblue_3817.ico in Resources */,
 				CE8332691E7CF1FF007D9C95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Dollar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Dollar;
@@ -297,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Dollar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Dollar;

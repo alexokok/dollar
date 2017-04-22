@@ -21,10 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="currency_dollarblue_9627.png" translatesAutoresizingMaskIntoConstraints="NO" id="AbV-4V-XVg">
-                                <rect key="frame" x="34" y="100" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="currency_euroblue_7162.png" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-Wh-IYf">
                                 <rect key="frame" x="34" y="250" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,6 +79,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="currency_dollarblue_3817.ico" translatesAutoresizingMaskIntoConstraints="NO" id="XsB-kL-uR4">
+                                <rect key="frame" x="34" y="84" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -102,7 +102,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="currency_dollarblue_9627.png" width="128" height="128"/>
+        <image name="currency_dollarblue_3817.ico" width="128" height="128"/>
         <image name="currency_euroblue_7162.png" width="128" height="128"/>
     </resources>
 </document>

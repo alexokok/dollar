@@ -55,12 +55,15 @@ UIActivityIndicatorView *indicator;
     
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
     
-    NSURL * url = [NSURL URLWithString:@"https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDRUB,EURRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback="];
+    NSURL * url = [NSURL URLWithString:@""];
     
     NSURLSessionDataTask * dataTask = [defaultSession dataTaskWithURL:url
         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-              if(error == nil)
-              {
+            if(error != nil){
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wait" message:@"Отсутствует подключение к сети" delegate:self cancelButtonTitle:@"Попробовать еще раз" otherButtonTitles:@"Отмена", nil];
+                [alert show];
+            }
+            else{
                   NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options: 0 error:&error];
                   NSDictionary *results = [json objectForKey:@"query"];
                   NSDictionary *rates = [results objectForKey:@"results"];
@@ -99,7 +102,11 @@ UIActivityIndicatorView *indicator;
     [dataTask resume];
 }
 
-  
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        [self loadCourses];
+    }
+}
 - (IBAction)getCourse:(id)sender {
     [self loadCourses];
 }
