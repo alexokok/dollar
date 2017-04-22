@@ -14,9 +14,32 @@
 
 /** индикатор при загрузке данных */
 UIActivityIndicatorView *indicator;
+NSTimer *timer;
+
 
 
 @implementation ViewController
+
+- (IBAction)startTimer {
+    timer = [NSTimer scheduledTimerWithTimeInterval:30.0f
+                                                  target:self
+                                                selector:@selector(tick)
+                                                userInfo:nil
+                                                 repeats:YES];
+}
+
+- (IBAction)stopTimer {
+    if ([timer isValid]) {
+        [timer invalidate];
+    }
+}
+
+
+- (void)tick {
+    [self loadCourses];
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,6 +51,8 @@ UIActivityIndicatorView *indicator;
     self.dollarLabel.text = NSLocalizedString(@"dollar", @"to dollar");
     
     self.euroLabel.text = NSLocalizedString(@"euro", @"to euro");
+    
+    [self startTimer];
     
     [self loadCourses];
 }
@@ -55,8 +80,8 @@ UIActivityIndicatorView *indicator;
     
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
     
-    NSURL * url = [NSURL URLWithString:@""];
-    
+    NSString *a = @"https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDRUB,EURRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=";
+    NSURL * url = [NSURL URLWithString:a];
     NSURLSessionDataTask * dataTask = [defaultSession dataTaskWithURL:url
         completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             if(error != nil){

@@ -20,6 +20,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *dollarLabel;
 @property (weak, nonatomic) IBOutlet UIButton *RefreshButton;
 
+
+- (IBAction)startTimer;
+- (IBAction)stopTimer;
+
+
 - (IBAction)getCourse:(id)sender;
 - (void) loadCourses;
 @end
